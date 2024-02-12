@@ -4,14 +4,14 @@
     <div >
     <RoadTrip
       title="Sistema de Control de Vivero "
-      image="/public/vivero.png"
+      image="vivero.png"
       description="Es una solución integral diseñada para gestionar eficientemente todas las operaciones. Destacando en el control preciso de productos, se integra de manera fluida entre el inventario y la facturación automatizada. Su enfoque específico simplifica la administración, ofreciendo una herramienta completa para mejorar la eficiencia y el éxito."
     />
     </div>
     <div >
     <RoadTrip
       title="Pagina web El Sotano"
-      image="/public/sotano.jpg"
+      image="sotano.jpg"
       description="Es una página web para el público general que brinda detalles esenciales de la empresa, como sus sucursales,ubicación y contactos. Los visitantes encuentran datos sobre las colecciones y productos disponibles, así como una visión general de la historia y valores de El Sotano. La plataforma busca convertirse en un recurso esencial para clientes y seguidores."
     />
     </div>
