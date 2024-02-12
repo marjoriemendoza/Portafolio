@@ -6,14 +6,12 @@ import ProyectosPages from "../pages/ProyectosPages.vue";
 export const routes:RouteRecordRaw[]=[
 
     {
-        name:"Home",
         component:HomePage,
         path:"/",
    },
     {
-    name:"Proyectos",
-    component:ProyectosPages,
-    path:"/proyectos",
+       component:ProyectosPages,
+       path:"/proyectos",
     },
     
 ];

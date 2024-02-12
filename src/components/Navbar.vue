@@ -4,16 +4,8 @@
       <nav class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white hidden md:flex items-center">
         <!-- Lista de enlaces -->
         <ul class="flex space-x-4 font-bold text-xl">
-          <li>
-            <a href="/" class="group">
-        <span class="text-gradient">Inicio</span>
-        </a>
-          </li>
-          <li>
-            <a href="/proyectos" class="group">
-        <span class="text-gradient">Proyectos</span>
-        </a>
-          </li>
+          <li class="text-gradient"><router-link to="/">Home</router-link></li>
+          <li class="text-gradient"><router-link to="/proyectos">Proyectos</router-link></li>
         </ul>
   
         <!-- Imagen en el navbar -->
