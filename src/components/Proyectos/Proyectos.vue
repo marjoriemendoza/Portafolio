@@ -11,7 +11,7 @@
     <div >
     <RoadTrip
       title="Pagina web El Sotano"
-      image="../portafolio/src/imagenes/sotano.jpg"
+      image="../src/imagenes/sotano.jpg"
       description="Es una página web para el público general que brinda detalles esenciales de la empresa, como sus sucursales,ubicación y contactos. Los visitantes encuentran datos sobre las colecciones y productos disponibles, así como una visión general de la historia y valores de El Sotano. La plataforma busca convertirse en un recurso esencial para clientes y seguidores."
     />
     </div>
