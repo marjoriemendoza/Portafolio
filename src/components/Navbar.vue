@@ -9,7 +9,7 @@
         </ul>
   
         <!-- Imagen en el navbar -->
-        <img src="../imagenes/palete.png" alt="Tu Imagen" class="w-12 h-12 rounded-full ml-auto">
+        <img src="../imagenes/palete-dos.png" alt="Tu Imagen" class="w-12 h-12 rounded-full ml-auto">
       </nav>
   
       <!-- Navbar para pantallas pequeñas -->
