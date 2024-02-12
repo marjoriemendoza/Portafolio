@@ -4,7 +4,7 @@
     <div >
     <RoadTrip
       title="Sistema de Control de Vivero "
-      image="../../../src/assets/image/vivero.png" alt="no se encontró la imagen"
+      image="../../imagenes/manchas.png" alt="no se encontró la imagen"
       description="Es una solución integral diseñada para gestionar eficientemente todas las operaciones. Destacando en el control preciso de productos, se integra de manera fluida entre el inventario y la facturación automatizada. Su enfoque específico simplifica la administración, ofreciendo una herramienta completa para mejorar la eficiencia y el éxito."
     />
     </div>
