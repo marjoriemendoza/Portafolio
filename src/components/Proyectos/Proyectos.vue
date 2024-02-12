@@ -4,21 +4,21 @@
     <div >
     <RoadTrip
       title="Sistema de Control de Vivero "
-      src="../../../src/assets/image/vivero.png" alt="no se encontró la imagen"
+      image="../../../src/assets/image/vivero.png" alt="no se encontró la imagen"
       description="Es una solución integral diseñada para gestionar eficientemente todas las operaciones. Destacando en el control preciso de productos, se integra de manera fluida entre el inventario y la facturación automatizada. Su enfoque específico simplifica la administración, ofreciendo una herramienta completa para mejorar la eficiencia y el éxito."
     />
     </div>
     <div >
     <RoadTrip
       title="Pagina web El Sotano"
-      src="../src/assets/image/sotano.jpg"
+      image="../src/assets/image/sotano.jpg"
       description="Es una página web para el público general que brinda detalles esenciales de la empresa, como sus sucursales,ubicación y contactos. Los visitantes encuentran datos sobre las colecciones y productos disponibles, así como una visión general de la historia y valores de El Sotano. La plataforma busca convertirse en un recurso esencial para clientes y seguidores."
     />
     </div>
     <div>
      <RoadTrip
       title="Sistema para una Libreria"
-      src="../src/assets/image/libreria.png"
+      image="../src/assets/image/libreria.png"
       description="Es una herramienta integral que facilita la realización de ventas, gestiona un inventario eficiente y garantiza la seguridad a través de un sistema de login. Este sistema también ofrece la funcionalidad de apertura y cierre de cajas, asegurándose de que exista una caja disponible antes de cada venta. Diseñado para mejorar la eficiencia operativa, el sistema proporciona una experiencia segura y completa para la administración."
     />
   </div>
