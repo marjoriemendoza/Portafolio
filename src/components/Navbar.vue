@@ -4,7 +4,7 @@
       <nav class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white hidden md:flex items-center">
         <!-- Lista de enlaces -->
         <ul class="flex space-x-4 font-bold text-xl">
-          <li class="text-gradient"><router-link to="/">Home</router-link></li>
+          <li class="text-gradient"><router-link to="/">Inicio</router-link></li>
           <li class="text-gradient"><router-link to="/proyectos">Proyectos</router-link></li>
         </ul>
   
@@ -28,15 +28,13 @@
       <!-- Lista de enlaces en menú desplegable -->
       <div v-if="isMobileMenuOpen" class="md:hidden bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 mb-4 font-bold text-xl">
         <div class="p-4">
-        <a href="/" class="group">
-        <span class="text-gradient">Inicio</span>
-        </a>
+          <router-link to="/">
+        <span class="text-gradient">Inicio</span></router-link>
       </div>
       <div class="p-4">
-        <a href="/proyectos" class="group">
-        <span class="text-gradient">Proyectos</span>
-        </a>
-      </div>
+        <router-link to="/proyectos">
+        <span class="text-gradient">Proyectos</span></router-link>
+       </div>
       </div>
     </div>
   </template>
