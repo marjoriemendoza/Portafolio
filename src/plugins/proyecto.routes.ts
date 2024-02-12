@@ -1,6 +1,6 @@
 import {RouteRecordRaw,createWebHistory,createRouter} from "vue-router";
 import HomePage from "../pages/HomePage.vue";
-import Proyectos from "../components/Proyectos/Proyectos.vue";
+import ProyectosPages from "../pages/ProyectosPages.vue";
 
 
 export const routes:RouteRecordRaw[]=[
@@ -10,7 +10,7 @@ export const routes:RouteRecordRaw[]=[
         path:"/",
    },
     {
-       component:Proyectos,
+       component:ProyectosPages,
        path:"/proyectos",
     },
     
