@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <div >
+    <div class=" flex items-center justify-center">
       <div class="p-14 lg:grid grid-cols-2 gap-6 ml-16 mx-12 max-w-gd">
         
         <!-- Imagen redonda a la izquierda -->
