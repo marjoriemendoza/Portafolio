@@ -1,7 +1,7 @@
 <template>
     <div>
       <!-- Navbar para pantallas grandes -->
-      <nav class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white hidden md:flex items-center">
+      <nav class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white hidden md:flex items-center w-screen">
         <!-- Lista de enlaces -->
         <ul class="flex space-x-4 font-bold text-xl">
           <div class="group">
