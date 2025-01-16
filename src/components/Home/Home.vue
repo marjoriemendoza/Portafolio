@@ -2,7 +2,7 @@
   <div>
     <Navbar></Navbar>
     <div class=" flex items-center justify-center">
-      <div class="p-14 lg:grid grid-cols-2 gap-6 ml-16 mx-12 max-w-gd">
+      <div class="p-14 lg:grid grid-cols-2 gap-6 ml-16 mx-12 ">
         
         <!-- Imagen redonda a la izquierda -->
         <div class="col-span-1 flex items-center relative">
@@ -15,7 +15,7 @@
             Hola, soy Marjorie Mendoza
           </p>
           <p class="text-justify text-lg text-black mt-4 lg:mr-20 sm:mr-0">
-            Soy un estudiante de desarrollo de software apasionado por adquirir nuevas experiencias y conocimientos. Puedo aportar a la empresa habilidades para resolver problemas, trabajar en equipo, aprender de manera rápida y utilizar tecnologías de programación para desarrollar soluciones innovadoras y eficientes. Mi objetivo es ayudar a mejorar los productos y servicios de la empresa.
+            Soy una desarrolladora de software con una sólida formación académica y habilidades prácticas en programación, aprendizaje rápido y trabajo en equipo. Me destaco por cumplir con las tareas asignadas de manera eficiente, aportando ideas y sugerencias cuando identifico oportunidades de mejora, siempre dispuesta a aprender de las soluciones propuestas. Mi objetivo es contribuir al desarrollo de productos y servicios que impulsen el crecimiento de la empresa y mejoren la experiencia del usuario.
           </p>
         </div>
 

@@ -1,77 +1,76 @@
 <template>
   <Navbar></Navbar>
-  <div id="proyectos" class="grid grid-cols-1">
-    <div >
-    <RoadTrip
-      title="Sistema de Control de Vivero "
-      image="vivero.png"
-      description="Es una solución integral diseñada para gestionar eficientemente todas las operaciones. Destacando en el control preciso de productos, se integra de manera fluida entre el inventario y la facturación automatizada. Su enfoque específico simplifica la administración, ofreciendo una herramienta completa para mejorar la eficiencia y el éxito."
-    />
+  <div id="proyectos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- Mostrar los primeros 3 proyectos -->
+    <div v-for="(project, index) in visibleProjects" :key="index" class="flex flex-col h-full">
+      <RoadTrip
+        :title="project.title"
+        :image="project.image"
+        :description="project.description"
+      />
     </div>
-    <div >
-    <RoadTrip
-      title="Pagina web El Sotano"
-      image="sotano.jpg"
-      description="Es una página web para el público general que brinda detalles esenciales de la empresa, como sus sucursales,ubicación y contactos. Los visitantes encuentran datos sobre las colecciones y productos disponibles, así como una visión general de la historia y valores de El Sotano. La plataforma busca convertirse en un recurso esencial para clientes y seguidores."
-    />
+
+    <!-- Botón "Ver más" -->
+    <div v-if="projects.length > 3" class="col-span-full justify-center px-6 pb-6">
+      <button
+        @click="toggleShowAll"
+        class="flex items-center justify-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+      >
+        <!-- Icono y texto dinámicos -->
+        <font-awesome-icon :icon="showAll ? ['fas', 'chevron-up'] : ['fas', 'chevron-down']" class="mr-2" />
+        {{ showAll ? 'Ver menos' : 'Ver más' }}
+      </button>
     </div>
-    <div>
-     <RoadTrip
-      title="Sistema para una Libreria"
-      image="libreria.png"
-      description="Es una herramienta integral que facilita la realización de ventas, gestiona un inventario eficiente y garantiza la seguridad a través de un sistema de login. Este sistema también ofrece la funcionalidad de apertura y cierre de cajas, asegurándose de que exista una caja disponible antes de cada venta. Diseñado para mejorar la eficiencia operativa, el sistema proporciona una experiencia segura y completa para la administración."
-    />
-  </div>
-   
+
   </div>
 </template>
 
 <script lang="ts" setup>
 import RoadTrip from "../Cartas.vue";
 import Navbar from "../Navbar.vue";
+import { ref , computed} from "vue";
+import { FontAwesomeIcon } from "../../plugins/fontawesome.ts";
 
+
+// Datos de los proyectos
+const projects = ref([
+  {
+    title: "El Sótano",
+    image: "sotano.jpg",
+    description: "Página web dirigida al público en general, diseñada para proporcionar información sobre la empresa, datos de contacto y un catálogo de productos disponibles tanto para mayoristas como para minoristas."
+  },
+  {
+    title: "Clinica de Diagnostico Veterinario",
+    image: "veterinaria.png",
+    description: "Sistema para la gestión integral de la veterinaria, con control de pacientes, propietarios, citas, ventas, etc. Cuenta con inicio de sesión para garantizar la seguridad de la información."
+  },
+  {
+    title: "Libreria Gamaliel",
+    image: "libreria.jpg",
+    description: "Sistema integral para ventas e inventario con login seguro, gestión de cajas y herramientas para optimizar la administración."
+  },
+  {
+    title: "Si-ham Occidente",
+    image: "si-ham.png",
+    description: "Sistema integral para la gestión de productos, control de ventas, inventarios y reportes. Permite llevar un registro detallado de clientes y proveedores, optimizando la administración del negocio."
+  },
+  // Puedes agregar más proyectos aquí
+]);
+
+// Variable para manejar la visibilidad de los proyectos
+const showAll = ref(false);
+
+// Computada para obtener solo los primeros 3 proyectos
+const visibleProjects = computed(() => {
+  return showAll.value ? projects.value : projects.value.slice(0, 3);
+});
+
+// Función para alternar la visibilidad de los proyectos adicionales
+function toggleShowAll() {
+  showAll.value = !showAll.value;
+}
 </script>
 
-<style>
-/* Agrega estilos globales aquí */
+<style scoped>
+/* Puedes agregar estilos adicionales aquí si lo necesitas */
 </style>
-
-<!-- <template>
-  <div class="flex flex-row justify-between gap-4 mt-4">
-    <div class="flex w-auto">
-      <label class="mt-3 text-lg font-bold border-collapse border-cyan-400">Total </label>
-      <input
-        type="number"
-        class="p-3 mt-1 mx-2 border outline-none rounded-2xl"
-        v-model="totalToPay"
-      />
-    </div>
-  </div>
-  <div class="flex flex-row justify-between gap-4 mt-4">
-    <div class="flex w-auto">
-      <label class="mt-3 text-lg font-bold border-collapse border-cyan-400">Total en letras: </label>
-      <input
-        type="text"
-        readonly
-        class="p-3 mt-1 mx-2 outline-none rounded-2xl w-screen"
-        :value="ToPayLetters"
-      />
-    </div>
-  </div>
-</template>
-
-<script lang="ts" setup>
-import { ref, watch } from "vue";
-import { convertCurrencyFormat, truncateNumberToFourDecimals } from "../../plugins/money";
-
-const totalToPay = ref();
-const ToPayLetters = ref("");
-
-const updateToPayLetters = () => {
-  ToPayLetters.value = convertCurrencyFormat(
-    truncateNumberToFourDecimals(Number(totalToPay.value))
-  );
-};
-
-watch(totalToPay, updateToPayLetters);
-</script> -->

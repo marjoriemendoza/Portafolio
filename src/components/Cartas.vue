@@ -1,21 +1,16 @@
 <template>
   <div class="m-6">
-    <div class="grid lg:grid-cols-2 bg-white rounded-lg text-center w-full border border-gray-300 shadow-lg p-6 hover:bg-purple-100" @click="toggleDescription">
-      <img :src='image' alt="" class="w-96 h-96 bg-blue-500 mb-4 rounded-xl" />
-      <div class="lg:flex lg:flex-col lg:items-start lg:ml-4" >
+    <div class="flex flex-col bg-white rounded-lg items-center text-center w-full lg:h-full border border-gray-300 shadow-lg p-6 hover:bg-purple-100" >
+      <img :src="image" alt="" class="w-64 h-64 bg-white mb-4 rounded-xl" />
+      <div class="flex flex-col flex-grow lg:ml-4">
         <h2 class="font-bold text-black text-3xl text-center">{{ title }}</h2>
-        <div class="lg:hidden text-indigo-500 text-right grid">
-          <font-awesome-icon :icon="['fas', 'chevron-down']" />
-        </div>
-        <div class=" ml-0 m-4 text-left grid text-2xl " :class="{ 'hidden lg:grid': !isDescriptionVisible}"
->
+        <div class="ml-0 m-4 text-center grid text-2xl">
           <p>{{ description }}</p>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -44,13 +39,18 @@ export default defineComponent({
     },
   },
 });
-
-
-</script>
-<script lang="ts" setup>
-import { FontAwesomeIcon } from "../plugins/fontawesome.ts";
 </script>
 
 <style scoped>
+/* Asegúrate de que todas las tarjetas tengan la misma altura */
+div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 350px; /* Asegura una altura mínima */
+}
 
+img {
+  object-fit: cover; /* Evita que la imagen se deforme */
+}
 </style>

@@ -1,9 +1,9 @@
 <template>
     <div>
       <!-- Navbar para pantallas grandes -->
-      <nav class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white hidden md:flex items-center">
+      <nav class="bg-gradient-to-r from-[#02153d] to-blue-500 p-4 text-white flex items-center max-w-screen">
         <!-- Lista de enlaces -->
-        <ul class="flex space-x-4 font-bold text-xl">
+        <ul class="hidden space-x-4 font-bold text-xl md:flex">
           <div class="group">
            <li class="text-gradient"><router-link to="/">Inicio</router-link></li> 
           </div>
@@ -11,26 +11,21 @@
           <li class="text-gradient"><router-link to="/proyectos">Proyectos</router-link></li>
            </div>
         </ul>
-  
-        <!-- Imagen en el navbar -->
-        <img src="../imagenes/palete-dos.png" alt="Tu Imagen" class="w-12 h-12 rounded-full ml-auto">
-      </nav>
-  
-      <!-- Navbar para pantallas pequeñas -->
-      <nav class="bg-gradient-to-r from-blue-500 to-purple-500 text-white md:hidden flex items-center justify-between p-4">
-        <!-- Ícono de menú para desplegar en pantallas pequeñas -->
-        <button @click="toggleMobileMenu" class="focus:outline-none">
+        <button @click="toggleMobileMenu" class="focus:outline-none flex md:hidden">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
   
-        <!-- Imagen en el navbar (opcional, puedes ajustar según tus necesidades) -->
-        <img src="../imagenes/palete.png" alt="Tu Imagen" class="w-12 h-12 rounded-full">
+        <!-- Imagen en el navbar -->
+        <img src="../imagenes/logo.png" alt="Tu Imagen" class="w-12 h-12 rounded-full ml-auto">
       </nav>
   
+      <!-- Navbar para pantallas pequeñas -->
+     
+  
       <!-- Lista de enlaces en menú desplegable -->
-      <div v-if="isMobileMenuOpen" class="md:hidden bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 mb-4 font-bold text-xl">
+      <div v-if="isMobileMenuOpen" class="md:hidden bg-gradient-to-r from-[#02153d] to-blue-500  text-white p-2 mb-4 font-bold text-xl">
         <div class="p-4">
           <div class="group">
            <router-link to="/">
